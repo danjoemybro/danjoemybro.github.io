@@ -14,14 +14,20 @@ body {
 }
 
 main {
-  padding: 0;
   position: relative;
-  top: 50px;
-  width: 100%;
+  top: 3em;
+  padding: 0;
+  max-width: 90rem;
+  margin: 0 auto;
 }
 
-article {
+.article {
   padding: 40px 40px;
+  max-width: 1em;
+}
+
+.arty {
+  padding: 0 1em;
 }
 
 img {
@@ -37,4 +43,3 @@ h2 {
   font-weight: 500;
   font-style: italic;
 }
-

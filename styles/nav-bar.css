@@ -1,5 +1,6 @@
 /* Navigation Bar Styling */
 
+
 /* * {
   border: 1px solid red;
 } */
@@ -21,6 +22,18 @@ nav a {
   font-size: 14px;
   font-weight: 300;
   display: inline-block;
+}
+
+@media (max-width: 40em) {
+  nav a {
+    /* visibility: hidden; */
+    padding: 15px 4px;
+    color: #dbdbdb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+  }
 }
 
 nav a:hover {
