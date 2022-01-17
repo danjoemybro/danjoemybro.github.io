@@ -1,0 +1,13 @@
+footer {
+  padding: 1.5em 2em;
+  max-width: 70rem;
+  margin: 0 auto;
+  /* border: 2px solid red; */
+
+  background-color: white;
+}
+
+footer * {
+  color: black;
+  line-height: 1.8;
+}

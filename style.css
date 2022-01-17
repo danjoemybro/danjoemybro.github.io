@@ -20,14 +20,6 @@ main {
   /* border: 2px solid red; */
 }
 
-footer {
-  padding: 2em 1em;
-  max-width: 70rem;
-  margin: 0 auto;
-  /* border: 2px solid red; */
-  background-color: white;
-}
-
 .article {
   padding: 40px 40px;
   max-width: 1em;
@@ -40,6 +32,9 @@ footer {
 
 img {
   width: 100%;
+  position: absolute;
+  z-index: -1;
+
 }
 
 h1 {
