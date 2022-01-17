@@ -27,7 +27,7 @@ nav a {
 @media (max-width: 40em) {
   nav a {
     /* visibility: hidden; */
-    padding: 15px 4px;
+    padding: 15px 10px;
     color: #dbdbdb;
     text-decoration: none;
     font-size: 14px;
