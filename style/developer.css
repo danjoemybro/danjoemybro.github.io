@@ -1,0 +1,12 @@
+#development {
+  background-color: #313131;
+  padding: 2em;
+}
+
+.article img {
+  max-width: 10em;
+}
+
+.article {
+  padding-top: 1em;
+}

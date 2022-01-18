@@ -12,9 +12,11 @@ body {
   font-family: Raleway, Geneva, Tahoma, sans-serif;
   background-color: #eb6666;
   color: white;
+  padding: 0;
+  margin: 0;
 }
 
 main {
-  padding: 4em 0;
+  padding-top: 4em;
   margin: 0 auto;
 }

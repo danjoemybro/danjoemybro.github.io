@@ -1,0 +1,20 @@
+.container {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.container * {
+  line-height: 1.6;
+}
+
+.container h1 {
+  font-size: 2em;
+}
+
+.container h3 {
+  padding-top: 2em
+}
+
+.container img {
+  width: 100%;
+}
