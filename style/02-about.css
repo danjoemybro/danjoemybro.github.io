@@ -1,4 +1,40 @@
 #about {
   background-color: #1d1d1d;
-  padding: 2em;
+  padding: 1em;
+}
+
+#about h1 {
+  padding-inline: 0.5em;
+}
+
+#about h3 {
+  padding-inline: 0.5em;
+}
+
+.split {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  max-width: 60em;
+  /* padding: 2em; */
+}
+
+.box {
+  display: inline-block;
+  flex: 1 0 50%;
+  padding: 1em;
+}
+
+/* .text {
+  padding-left: 1em;
+} */
+
+.box img {
+  min-width: 15em;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5em;
+  box-shadow: 0 0.4em 3em #000000E3;
 }
