@@ -7,13 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./style/nav-bar.css">
-  <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/index.css">
-  <link rel="stylesheet" href="./style/developer.css">
-  <link rel="stylesheet" href="./style/header.css">
-  <link rel="stylesheet" href="./style/art&design.css">
-  <link rel="stylesheet" href="./style/music.css">
+  <link rel="stylesheet" href="./style/00-nav-bar.css">
+  <link rel="stylesheet" href="./style/01-header.css">
+  <link rel="stylesheet" href="./style/02-about.css">
+  <link rel="stylesheet" href="./style/03-developer.css">
+  <link rel="stylesheet" href="./style/04-art&design.css">
+  <link rel="stylesheet" href="./style/05-music.css">
+  <link rel="stylesheet" href="./style/10-footer.css">
 </head>
 
 <body>
@@ -21,26 +22,54 @@
     <a href="#">Dan Stubbs</a>
     <a href="#development">Development</a>
     <a href="#music">Music</a>
-    <a href="#artdesign">Design</a>
+    <a href="#artdesign">Art & Design</a>
   </nav>
   <header>
     <object data="./svg/icons.svg" id='bg-icons'> </object>
     <div class="main">
       <h1>Dan Stubbs</h1>
-      <h2>Flutter Developer and Designer</h2>
+      <h2>Flutter Developer and App Designer</h2>
+      <a href="/pages/flexpage.html">Flex Page! :)</a>
     </div>
     </header>
+    <section id="about">
+      <div class="container">
+        <h1>About Me</h1>
+        <img src="images/PXL_20211227_180235264.jpg" alt="">
+        <h3>Hi!</h3>
+        <p>
+          I'm a Flutter developer from Colchester with a background in <strong>music</strong>, <strong>art</strong> and
+          <strong>design</strong>.
+        </p>
+        <p></p>
+      </div>
+    </section>
     <section id="development">
       <div class="container">
         <h1>Development</h1>
+
         <h2>Fresh Play Ltd</h2>
+
         <h3>App Development</h3>
-        <p>Working as a Flutter developer.</p>
+        <p>Working as a Flutter developer to create quality and performant apps for our clients.</p>
+        <ul class="dev-list">
+          <li></li>
+        </ul>
+
         <h3>Game Development</h3>
-        <a href="https://store.steampowered.com/app/871940/BrawlQuest/" target=”_blank”>Brawl Quest</a>
-        <img src="images/brawlquest.png" alt="">
-        <img src="images/bq-poster.png" alt="">
-        <p>Working as a Flutter developer.</p>
+        <!-- <a href="https://store.steampowered.com/app/871940/BrawlQuest/" target=”_blank”>Brawl Quest</a> -->
+        <ul class="dev-list">
+          <li>Created Brawl Quest in Love2D and released to Steam</li>
+          <li>Worked as a team, became the leading contributor to the repository.</li>
+          <li>Developed world generation, user interface and player animations.</li>
+          <li>Just</li>
+        </ul>
+        <h1>STAR RUNNER</h1>
+        
+        <div class="game-dev-split">
+          <img src="images/bq-poster.png" alt="">
+        </div>
+
         <div class="article">
           <h3>Work in open source</h3>
           <h4>flutter_series</h4>
@@ -58,6 +87,8 @@
         <iframe src="https://open.spotify.com/embed/album/14ih1DSNKb0rJxxUI3hxXS?utm_source=generator&theme=0" width="100%"
           height="380" frameBorder="0" allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <h1>DAWS</h1>
+        <h1></h1>
       </div>
     </section>
     <section id="artdesign">
@@ -78,6 +109,7 @@
             <img src="images/IMG_20160707_183015.jpg" alt="">
           </div>
         </div>
+
       </div>
     </section>
     <footer id='contact'>
@@ -86,6 +118,7 @@
       <p>Phone Number: +447443 874014</p>
       <p>Email: danjoestubbs@gmail.com</p>
       <a href="https://github.com/danjoemybro" target=”_blank”>Github</a>
+
     </div>
   </footer>
 </body>

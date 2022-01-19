@@ -27,12 +27,7 @@ nav a {
 @media (max-width: 40em) {
   nav a {
     /* visibility: hidden; */
-    padding: 15px 10px;
-    color: #dbdbdb;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 300;
-    display: inline-block;
+    padding: 15px 5px;
   }
 }
 
