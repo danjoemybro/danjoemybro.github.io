@@ -99,10 +99,14 @@ li {
 img {
   object-fit: cover;
   border-radius: 0.5em;
-  box-shadow: 0 0.4em 3em #000000e3;
+  box-shadow: 0 0.4em 3em #00000075;
 }
 
 iframe {
   width: 100%;
   height: 380;
+}
+
+a {
+  color: #ffffff;
 }

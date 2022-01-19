@@ -1,6 +1,6 @@
 #artdesign {
-  background-color: #1d1d1d;
-  padding-block: 2em;
+  background-color: #194e45;
+  padding-block: 4em;
 }
 
 .row {
@@ -22,18 +22,28 @@
   width: 42%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-/* @media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-} */
+/* Image Table */
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-} */
+.slice-art {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 60em;
+}
+
+.box-art {
+  display: inline-block;
+  flex: 1 0 50%;
+  padding: 1em;
+}
+
+.box-art img {
+  min-width: 15em;
+  width: 100%;
+}
+
+#vibe-design {
+  margin-block: 2em;
+}
