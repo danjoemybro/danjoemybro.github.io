@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./style/index.css">
   <link rel="stylesheet" href="./style/00-nav-bar.css">
   <link rel="stylesheet" href="./style/01-header.css">
   <link rel="stylesheet" href="./style/02-about.css">
@@ -25,7 +24,7 @@
     <a href="#artdesign">Art & Design</a>
   </nav>
   <header>
-    <object data="./svg/icons.svg" id='bg-icons'> </object>
+    <object data="./svg/icons.svg" id="bg-icons"> </object>
     <div class="main">
       <h1>Dan Stubbs</h1>
       <h2>Flutter Developer and App Designer</h2>
@@ -36,7 +35,7 @@
       <div class="container">
         <h1>About Me</h1>
         <div class="split">
-          <div class="box">
+          <div class="box small">
             <img src="images/PXL_20211227_180235264.jpg" alt="">
           </div>
           <div class="box">
@@ -51,16 +50,12 @@
     </section>
     <section id="development">
       <div class="container">
-        <h1>Development</h1>
-
-        <h2>Fresh Play Ltd</h2>
-
-        <h3>App Development</h3>
-        <p>Working as a Flutter developer to create quality and performant apps for our clients.</p>
-        <ul class="dev-list">
-          <li></li>
-        </ul>
-
+        <div class="pad">
+          <h1>Development</h1>
+          <h2>Fresh Play Ltd</h2>
+          <h3>App Development</h3>
+          <p>Working as a Flutter developer to create quality and performant apps for our clients.</p>
+        </div>
 
         <!-- <a href="https://store.steampowered.com/app/871940/BrawlQuest/" target=”_blank”>Brawl Quest</a> -->
         <div class="split">
@@ -73,64 +68,72 @@
               <li>Just</li>
             </ul>
           </div>
-          <div class="box">
+          <div class="box small">
             <img src="images/bq-poster.png" alt="">
           </div>
         </div>
-        
 
-        <h1>STAR RUNNER</h1>
-      
-
-        <div class="article">
+        <div class="pad">
+          <h1>STAR RUNNER</h1>
           <h3>Work in open source</h3>
           <h4>flutter_series</h4>
           <p>A flutter plugin for improved row and column widgets with added spacing and optional interleaved dividers.</p>
-          <object data="svg/flutter_series.svg"></object>
+          </div>
+          
+        <div class="split">
+          <div class="box">
+            <h3>Work in open source</h3>
+            <h4>flutter_series</h4>
+            <p>A flutter plugin for improved row and column widgets with added spacing and optional interleaved dividers.</p>
+          </div>
+          <div class="box small">
+            <object data="svg/flutter_series.svg"></object>
+          </div>
         </div>
       </div>
     </section>
     <section id="music">
       <div class="container">
-        <h1>Music</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores sit, repudiandae perferendis dolor
-          mollitia.</p>
-        <p><a href="https://open.spotify.com/album/14ih1DSNKb0rJxxUI3hxXS" target=”_blank”>Spotify Link</a></p>
-        <iframe src="https://open.spotify.com/embed/album/14ih1DSNKb0rJxxUI3hxXS?utm_source=generator&theme=0" width="100%"
-          height="380" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        <h1>DAWS</h1>
-        <h1></h1>
+        <div class="pad">
+          <h1>Music</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem asperiores sit, repudiandae perferendis dolor
+            mollitia.</p>
+          <p><a href="https://open.spotify.com/album/14ih1DSNKb0rJxxUI3hxXS" target="_blank">Spotify Link</a></p>
+          <iframe src="https://open.spotify.com/embed/album/14ih1DSNKb0rJxxUI3hxXS?utm_source=generator&theme=0" width="100%"
+            height="380" frameborder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <h1>DAWS</h1>
+        </div>
       </div>
     </section>
     <section id="artdesign">
       <div class="container">
-        <h1>Art & Design</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur nesciunt officiis sed nisi quis blanditiis!
-        </p>
-        <div class="row">
-          <div class="column">
-            <img src="images/IMG_20160527_142956.jpg" alt="">
-            <img src="images/IMG_20160607_140727 (1).jpg" alt="">
+        <div class="pad">
+          <h1>Art & Design</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur nesciunt officiis sed nisi quis blanditiis!
+          </p>
+          <div class="row">
+            <div class="column">
+              <img src="images/IMG_20160527_142956.jpg" alt="">
+              <img src="images/IMG_20160607_140727 (1).jpg" alt="">
+            </div>
           </div>
+          <div class="row">
+            <div class="column">
+              <img src="images/IMG_20160515_154811.jpg" alt="">
+              <img src="images/IMG_20160707_183015.jpg" alt="">
+            </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="column">
-            <img src="images/IMG_20160515_154811.jpg" alt="">
-            <img src="images/IMG_20160707_183015.jpg" alt="">
-          </div>
-        </div>
-
       </div>
     </section>
-    <footer id='contact'>
-    <div class='footer'>
+    <footer id="contact">
+      <div class="footer">
       <h3>Contact Details:</h3>
       <p>Phone Number: +447443 874014</p>
       <p>Email: danjoestubbs@gmail.com</p>
-      <a href="https://github.com/danjoemybro" target=”_blank”>Github</a>
-
+      <a href="https://github.com/danjoemybro" target="_blank">Github</a>
     </div>
   </footer>
 </body>
