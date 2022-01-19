@@ -1,5 +1,7 @@
 {
   "cSpell.words": [
     "artdesign"
-  ]
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

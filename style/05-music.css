@@ -1,5 +1,20 @@
-
 #music {
   background-color: #000000;
   padding-block: 2em;
+}
+
+#music h2 {
+  margin-top: 1.6em;
+}
+
+#music img {
+  margin-block: 1.5em;
+}
+
+#music * {
+  line-height: 1.6;
+}
+
+#music iframe {
+  margin-block: 2em;
 }
