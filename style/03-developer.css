@@ -1,5 +1,12 @@
 #development {
-  background-color: #313131;
+  background-color: #1d1d1d;
+  padding-block: 2em;
+}
+
+#development h1 {
+  /* text-align: center; */
+  padding-top: 2em;
+
 }
 
 .article img {
@@ -8,4 +15,19 @@
 
 .article {
   padding-top: 1em;
+}
+
+.dev-detail h2 {
+  line-height: 2;
+}
+.dev-detail div {
+  height: 1em;
+}
+
+.dev-list li {
+  line-height: 2;
+}
+
+#star-runner-img {
+  min-width: 20em;
 }

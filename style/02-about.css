@@ -1,24 +1,19 @@
 #about {
   background-color: #1d1d1d;
-  padding: 1em;
-}
-
-#about h1 {
-  padding-inline: 0.5em;
-}
-
-#about h3 {
-  padding-inline: 0.5em;
+  padding-block: 2em;
 }
 
 .split {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
+  align-items:stretch;
+  flex-wrap: wrap;
   max-width: 60em;
-  /* padding: 2em; */
+}
+
+.reverse {
+  flex-direction: row-reverse;
 }
 
 .box {
@@ -32,7 +27,7 @@
 }
 
 .box img {
-  min-width: 13.5em;
+  min-width: 14em;
   width: 100%;
   object-fit: cover;
   border-radius: 0.5em;
@@ -40,7 +35,7 @@
 }
 
 .box object {
-  min-width: 13.5em;
+  min-width: 14em;
   width: 100%;
   object-fit: cover;
 }
