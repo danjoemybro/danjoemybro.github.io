@@ -1,41 +1,5 @@
 #about {
-  background-color: #1d1d1d;
-  padding-block: 2em;
+  background-color: #cc4a4a;
+  padding-top: 2em;
 }
 
-.split {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items:stretch;
-  flex-wrap: wrap;
-  max-width: 60em;
-}
-
-.reverse {
-  flex-direction: row-reverse;
-}
-
-.box {
-  display: inline-block;
-  flex: 1 0 50%;
-  padding: 1.25em;
-}
-
-.small {
-  flex: 1 0 10%;
-}
-
-.box img {
-  min-width: 14em;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0.5em;
-  box-shadow: 0 0.4em 3em #000000E3;
-}
-
-.box object {
-  min-width: 14em;
-  width: 100%;
-  object-fit: cover;
-}
