@@ -3,8 +3,12 @@
   padding-block: 2em;
 }
 
+#development h2 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
 #development h1 {
-  /* text-align: center; */
   padding-top: 1em;
 }
 
@@ -17,8 +21,9 @@
 }
 
 .dev-detail h2 {
-  line-height: 2;
+  line-height: 1;
 }
+
 .dev-detail div {
   height: 1em;
 }

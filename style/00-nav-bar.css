@@ -30,8 +30,3 @@ nav a {
     padding: 15px 5px;
   }
 }
-
-nav a:hover {
-  color: white;
-  /* border: 2px solid white; */
-}
