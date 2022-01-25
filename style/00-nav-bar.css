@@ -1,6 +1,5 @@
 /* Navigation Bar Styling */
 
-
 /* * {
   border: 1px solid red;
 } */
@@ -22,6 +21,7 @@ nav a {
   font-size: 14px;
   font-weight: 300;
   display: inline-block;
+  transition: 0.3s;
 }
 
 @media (max-width: 40em) {

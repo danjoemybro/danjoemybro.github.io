@@ -6,7 +6,6 @@
 #development h1 {
   /* text-align: center; */
   padding-top: 1em;
-
 }
 
 .article img {
@@ -30,4 +29,31 @@
 
 #star-runner-img {
   min-width: 20em;
+}
+
+/* App Images */
+
+.appImages {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em;
+  justify-items: center;
+  align-items: center;
+}
+
+.appImage {
+  flex: 1 0 9em;
+  padding: 0.5em;
+}
+
+.appImage img {
+  max-width: 20em;
+  min-width: 9em;
+  /* width: 100%; */
+  /* box-shadow:ne; */
+  transition: 0.3s;
+}
+
+.appImage img:hover {
+  opacity: 0.8;
 }
