@@ -6,3 +6,5 @@ const app = new App({
 });
 
 export default app;
+
+// git subtree push --prefix public/ origin gh-pages

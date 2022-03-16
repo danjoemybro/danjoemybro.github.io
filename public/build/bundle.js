@@ -245,6 +245,59 @@ var app = (function () {
             node.style.setProperty(key, value, important ? 'important' : '');
         }
     }
+    // unfortunately this can't be a constant as that wouldn't be tree-shakeable
+    // so we cache the result instead
+    let crossorigin;
+    function is_crossorigin() {
+        if (crossorigin === undefined) {
+            crossorigin = false;
+            try {
+                if (typeof window !== 'undefined' && window.parent) {
+                    void window.parent.document;
+                }
+            }
+            catch (error) {
+                crossorigin = true;
+            }
+        }
+        return crossorigin;
+    }
+    function add_resize_listener(node, fn) {
+        const computed_style = getComputedStyle(node);
+        if (computed_style.position === 'static') {
+            node.style.position = 'relative';
+        }
+        const iframe = element('iframe');
+        iframe.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; ' +
+            'overflow: hidden; border: 0; opacity: 0; pointer-events: none; z-index: -1;');
+        iframe.setAttribute('aria-hidden', 'true');
+        iframe.tabIndex = -1;
+        const crossorigin = is_crossorigin();
+        let unsubscribe;
+        if (crossorigin) {
+            iframe.src = "data:text/html,<script>onresize=function(){parent.postMessage(0,'*')}</script>";
+            unsubscribe = listen(window, 'message', (event) => {
+                if (event.source === iframe.contentWindow)
+                    fn();
+            });
+        }
+        else {
+            iframe.src = 'about:blank';
+            iframe.onload = () => {
+                unsubscribe = listen(iframe.contentWindow, 'resize', fn);
+            };
+        }
+        append(node, iframe);
+        return () => {
+            if (crossorigin) {
+                unsubscribe();
+            }
+            else if (unsubscribe && iframe.contentWindow) {
+                unsubscribe();
+            }
+            detach(iframe);
+        };
+    }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, false, detail);
@@ -18859,19 +18912,28 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let nav;
     	let div;
+    	let t0;
+    	let button;
+    	let nav_resize_listener;
     	let current;
-    	const default_slot_template = /*#slots*/ ctx[1].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
+    	const default_slot_template = /*#slots*/ ctx[2].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[1], null);
 
     	const block = {
     		c: function create() {
     			nav = element("nav");
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr_dev(div, "class", "links container svelte-1j68gvi");
-    			add_location(div, file$1, 1, 2, 8);
-    			attr_dev(nav, "class", "svelte-1j68gvi");
-    			add_location(nav, file$1, 0, 0, 0);
+    			t0 = space();
+    			button = element("button");
+    			button.textContent = "Love";
+    			attr_dev(button, "class", "svelte-q5ekm3");
+    			add_location(button, file$1, 7, 4, 111);
+    			attr_dev(div, "class", "links container svelte-q5ekm3");
+    			add_location(div, file$1, 5, 2, 64);
+    			attr_dev(nav, "class", "svelte-q5ekm3");
+    			add_render_callback(() => /*nav_elementresize_handler*/ ctx[3].call(nav));
+    			add_location(nav, file$1, 4, 0, 39);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -18884,19 +18946,22 @@ var app = (function () {
     				default_slot.m(div, null);
     			}
 
+    			append_dev(div, t0);
+    			append_dev(div, button);
+    			nav_resize_listener = add_resize_listener(nav, /*nav_elementresize_handler*/ ctx[3].bind(nav));
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
     			if (default_slot) {
-    				if (default_slot.p && (!current || dirty & /*$$scope*/ 1)) {
+    				if (default_slot.p && (!current || dirty & /*$$scope*/ 2)) {
     					update_slot_base(
     						default_slot,
     						default_slot_template,
     						ctx,
-    						/*$$scope*/ ctx[0],
+    						/*$$scope*/ ctx[1],
     						!current
-    						? get_all_dirty_from_scope(/*$$scope*/ ctx[0])
-    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[0], dirty, null),
+    						? get_all_dirty_from_scope(/*$$scope*/ ctx[1])
+    						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null),
     						null
     					);
     				}
@@ -18914,6 +18979,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(nav);
     			if (default_slot) default_slot.d(detaching);
+    			nav_resize_listener();
     		}
     	};
 
@@ -18931,17 +18997,33 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NavBar', slots, ['default']);
+    	let clientWidth;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NavBar> was created with unknown prop '${key}'`);
     	});
 
+    	function nav_elementresize_handler() {
+    		clientWidth = this.clientWidth;
+    		$$invalidate(0, clientWidth);
+    	}
+
     	$$self.$$set = $$props => {
-    		if ('$$scope' in $$props) $$invalidate(0, $$scope = $$props.$$scope);
+    		if ('$$scope' in $$props) $$invalidate(1, $$scope = $$props.$$scope);
     	};
 
-    	return [$$scope, slots];
+    	$$self.$capture_state = () => ({ clientWidth });
+
+    	$$self.$inject_state = $$props => {
+    		if ('clientWidth' in $$props) $$invalidate(0, clientWidth = $$props.clientWidth);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [clientWidth, $$scope, slots, nav_elementresize_handler];
     }
 
     class NavBar extends SvelteComponentDev {
@@ -19622,6 +19704,8 @@ var app = (function () {
       target: document.body,
       props: {},
     });
+
+    // git subtree push --prefix public/ origin gh-pages
 
     return app;
 

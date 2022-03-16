@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "firebase": "^9.6.8",
+    "gh-pages": "^3.2.3",
     "rxfire": "^6.0.3",
     "rxjs": "^7.5.5",
     "sirv-cli": "^2.0.0",
