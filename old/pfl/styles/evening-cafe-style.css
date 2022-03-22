@@ -1,0 +1,15 @@
+body {
+  background: #c3ccd5;
+}
+
+.left {
+  background-image: url("/pfl/images/Tea_2.jpg");
+}
+
+.right h3 {
+  color: #334d66;
+}
+
+.footer-left h4 {
+  color: #334d66;
+}

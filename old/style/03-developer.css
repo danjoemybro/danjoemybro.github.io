@@ -1,0 +1,64 @@
+#development {
+  background-color: #344661;
+  padding-block: 2em;
+}
+
+#development h2 {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+#development h1 {
+  padding-top: 1em;
+}
+
+.article img {
+  max-width: 10em;
+}
+
+.article {
+  padding-top: 1em;
+}
+
+.dev-detail h2 {
+  line-height: 1;
+}
+
+.dev-detail div {
+  height: 1em;
+}
+
+.dev-list li {
+  line-height: 2;
+}
+
+#star-runner-img {
+  min-width: 20em;
+}
+
+/* App Images */
+
+.appImages {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1em;
+  justify-items: center;
+  align-items: center;
+}
+
+.appImage {
+  flex: 1 0 9em;
+  padding: 0.5em;
+}
+
+.appImage img {
+  max-width: 20em;
+  min-width: 9em;
+  /* width: 100%; */
+  /* box-shadow:ne; */
+  transition: 0.3s;
+}
+
+.appImage img:hover {
+  opacity: 0.8;
+}

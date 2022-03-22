@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100vh;
+  background: #ffede9;
+}
+
+.left {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel {
+  flex-flow: row wrap;
+  width: 50%;
+  min-width: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  padding: 40px;
+  min-height: 100%;
+}
+
+.left h1 {
+  color: #fff;
+  margin-top: 0;
+  line-height: 1.4;
+  font-family: "OpenSauceOneSemiBold";
+  font-size: 50px;
+}
+
+.left h2 {
+  margin: 0;
+  color: #fff;
+  max-width: 60%;
+  font-family: "OpenSauceOneLight";
+  font-size: 22px;
+  line-height: 144.7%;
+}
+
+.right h3 {
+  font-family: "OpenSauceOneMedium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 2;
+  margin: 0;
+}
+
+.right p {
+  margin: 0;
+  font-size: 17.6px;
+  line-height: 155.2%;
+  margin-bottom: 16px;
+}
+
+.expanded {
+  flex-grow: 1;
+  min-height: 50px;
+}
+
+.spacer {
+  width: 20px;
+}
