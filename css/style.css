@@ -62,54 +62,22 @@ img {
   border-radius: 1rem;
 }
 
-/* Flex Layout Stuff */
-
-/* .split {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  max-width: 60em;
+hr {
+  width: calc(100% - 2rem);
+  margin-block: 2em;
+  border-top: 1px solid #d1d1d133;
+  border-radius: 5px;
 }
 
-.reverse {
-  flex-direction: row-reverse;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }
 
-.box {
-  display: inline-block;
-  flex: 1 0 50%;
-  padding: 1.25em;
+p {
+  font-weight: 200;
 }
-
-.small {
-  flex: 1 0 10%;
-}
-
-.box img {
-  min-width: 14em;
-  width: 100%;
-}
-
-.box object {
-  min-width: 14em;
-  width: 100%;
-  object-fit: cover;
-}
-
-img {
-  object-fit: cover;
-  border-radius: 0.5em;
-  box-shadow: 0 0.4em 3em #00000075;
-  width: 100%;
-}
-
-iframe {
-  width: 100%;
-  height: 380;
-}
-
-a {
-  color: #ffffff;
-} */

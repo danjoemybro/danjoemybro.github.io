@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="css/home/index.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/home/down-arrow.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/home/about.css">
+  <link rel="stylesheet" href="css/modal-image.css">
+  <link rel="stylesheet" href="css/home/down-arrow.css">
+  <link rel="stylesheet" href="css/home/about-me.css">
   <link rel="stylesheet" href="css/home/app-development.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet">
 
   <!-- scripts -->
   <script src="js/nav.js" defer></script>
+  <script src="js/modal-image.js" defer></script>
 
   <!-- flickity -->
   <link rel="stylesheet" href="packages/flickity/flickity.min.css"
@@ -54,8 +56,8 @@
               class="nav-link-number">01</span>About Me</a>
         </li>
         <li>
-          <a class="nav-link" href=""><span aria-hidden="true"
-              class="nav-link-number">02</span>Crew</a>
+          <a class="nav-link" href="#app-development"><span aria-hidden="true"
+              class="nav-link-number">02</span>App Development</a>
         </li>
         <li>
           <a class="nav-link" href=""><span aria-hidden="true"
@@ -76,31 +78,89 @@
 
   <main id="content">
 
-    <section id="about-me" class="split container">
-      <div class="about-content box">
-        <h2>About Me</h2>
-        <p>I'm a Flutter and Web developer with a background in
-          music, art and design. I live in Colchester with my beautiful wife
-          Vashti, and am currently looking for work in web development near
-          Colchester.</p>
-      </div>
-      <img src="images/dan-and-vashti.jpg" class="box small" alt="" srcset="">
-    </section>
+    <article id="about-me">
+      <section class="split container">
+        <div class="about-content box">
+          <h2>About Me</h2>
+          <p>I'm a Flutter and Web developer with a background in
+            music, art and design. I live in Colchester with my beautiful wife
+            Vashti, and am currently looking for work in web / app development
+            near Colchester.</p>
+        </div>
+        <img id="dan-and-vashti" src="images/dan-and-vashti.jpg"
+          class="box small" alt="" srcset="">
+      </section>
+    </article>
 
-    <section id="app-development" class="container">
+    <hr class="container">
+
+    <article id="app-development" class="container">
       <h2>App Development</h2>
       <p>I worked as a Developer for FreshPlay Ltd, below are a couple of the
         projects I worked on, coded in Flutter with Firebase backends. </p>
-      <div class="main-carousel" data-flickity='{ "freeScroll": true }'>
-        <div class="carousel-cell">
-          <a href="">
-            <img src="images/app-images/Screenshot_20220125-170448.png" alt="">
-          </a>
+      <section>
+        <h3>Conale</h3>
+        <p>
+          Conale (short for Condition Alert) is a weather warning app where
+          users can receive push notifications if the weather at a specific area
+          meets a users conditions.<br><br>This app required integration with
+          a client's Firebase backend with both Google and Apple login.
+        </p>
+        <div class="main-carousel" data-flickity='{ "freeScroll": true }'>
+          <div class="carousel-cell">
+            <img id="c-01"
+              src="images/app-images/Screenshot_20220125-170448.png"
+              alt="Conale app splash screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-02"
+              src="images/app-images/Screenshot_20220125-170721.png"
+              alt="Conale app login screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-03"
+              src="images/app-images/Screenshot_20220125-170701.png"
+              alt="Conale app sign-up screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-04"
+              src="images/app-images/Screenshot_20220125-173821.png"
+              alt="Conale home page with expanded alert">
+          </div>
         </div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div>
-    </section>
+      </section>
+
+      <section>
+        <h3>Original Wild - Code break Bath </h3>
+        <p>Code Break Bath is a treasure hunt style app for Original Wild based
+          in Bath.<br><br>My involvement in the development of the app includes
+          both front end and back end development with many of the pages also
+          being designed by me.
+        </p>
+        <div class="main-carousel" data-flickity='{ "freeScroll": true }'>
+          <div class="carousel-cell">
+            <img id="c-05"
+              src="images/app-images/Screenshot_20220125-171135.png"
+              alt="Conale app splash screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-06"
+              src="images/app-images/Screenshot_20220125-171225.png"
+              alt="Conale app login screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-07"
+              src="images/app-images/Screenshot_20220125-181032.png"
+              alt="Conale app sign-up screen">
+          </div>
+          <div class="carousel-cell">
+            <img id="c-08"
+              src="images/app-images/Screenshot_20220125-181103.png"
+              alt="Conale home page with expanded alert">
+          </div>
+        </div>
+      </section>
+    </article>
 
   </main>
 
@@ -112,6 +172,14 @@
       <a href="https://github.com/danjoemybro" target="_blank">Github</a>
     </div>
   </footer>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
 </body>
 
 </html>

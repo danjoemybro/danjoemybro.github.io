@@ -1,8 +1,8 @@
-#about-me {
+#about-me section {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  margin-block: 4rem;
+  padding-block: 4rem;
   gap: 2rem;
   line-height: 1.5;
 }
