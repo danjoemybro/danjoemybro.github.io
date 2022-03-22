@@ -11,21 +11,22 @@
     rel="stylesheet">
   <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
+  <script src="nav.js" defer></script>
   <title>Responsive Design</title>
 </head>
 
 <body>
-  <button class="mobile-nav-toggle" aria-controls="primary-navigation"
-    aria-expanded="false">
-    <span class="material-icons-round orage600">
-      menu
-    </span>
-  </button>
+
   <nav>
     <div class="logo"></div>
-    <ul id="primary-navigation" class="primary-navigation flex">
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"
+      aria-expanded="false">
+      <!-- <span class="sr-only">Menu</span> -->
+      <span class="material-icons-round">
+        menu
+      </span>
+    </button>
+    <ul id="primary-navigation" class="primary-navigation" data-visible="false">
       <li class="active">
         <a class="nav-link" href="index.html"><span aria-hidden="true"
             class="nav-link-number">00</span>Home</a>
