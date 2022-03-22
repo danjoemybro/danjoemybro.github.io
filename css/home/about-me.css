@@ -5,6 +5,7 @@
   padding-block: 4rem;
   gap: 2rem;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 #about-me img {
