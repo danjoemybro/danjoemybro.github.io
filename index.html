@@ -5,14 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/home/index.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/down-arrow.css">
+  <link rel="stylesheet" href="css/home/down-arrow.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home/about.css">
+  <link rel="stylesheet" href="css/home/app-development.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet">
+
+  <!-- scripts -->
   <script src="js/nav.js" defer></script>
+
+  <!-- flickity -->
+  <link rel="stylesheet" href="packages/flickity/flickity.min.css"
+    media="screen">
+  <script src="packages/flickity/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="css/home/carousel.css">
+
   <title>Home | Dan Stubbs</title>
 </head>
 
@@ -33,12 +46,12 @@
       <ul id="primary-navigation" class="primary-navigation"
         data-visible="false">
         <li class="active">
-          <a class="nav-link" href="index.html"><span aria-hidden="true"
+          <a class="nav-link" href="#"><span aria-hidden="true"
               class="nav-link-number">00</span>Home</a>
         </li>
         <li>
-          <a class="nav-link" href=""><span aria-hidden="true"
-              class="nav-link-number">01</span>Destination</a>
+          <a class="nav-link" href="#about-me"><span aria-hidden="true"
+              class="nav-link-number">01</span>About Me</a>
         </li>
         <li>
           <a class="nav-link" href=""><span aria-hidden="true"
@@ -61,13 +74,34 @@
     </a>
   </div>
 
-  <main id="content" class="container">
-    <section id="about-me">
-      <h2>About Me</h2>
-      <p>I'm a Flutter developer from Colchester with a background in music, art
-        and design. This website is dedicated to showing my work, whether
-        professional or personal, so you can get to know me better.</p>
+  <main id="content">
+
+    <section id="about-me" class="split container">
+      <div class="about-content box">
+        <h2>About Me</h2>
+        <p>I'm a Flutter and Web developer with a background in
+          music, art and design. I live in Colchester with my beautiful wife
+          Vashti, and am currently looking for work in web development near
+          Colchester.</p>
+      </div>
+      <img src="images/dan-and-vashti.jpg" class="box small" alt="" srcset="">
     </section>
+
+    <section id="app-development" class="container">
+      <h2>App Development</h2>
+      <p>I worked as a Developer for FreshPlay Ltd, below are a couple of the
+        projects I worked on, coded in Flutter with Firebase backends. </p>
+      <div class="main-carousel" data-flickity='{ "freeScroll": true }'>
+        <div class="carousel-cell">
+          <a href="">
+            <img src="images/app-images/Screenshot_20220125-170448.png" alt="">
+          </a>
+        </div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="contact">

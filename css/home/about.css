@@ -1,0 +1,40 @@
+#about-me {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-block: 4rem;
+  gap: 2rem;
+  line-height: 1.5;
+}
+
+#about-me img {
+  min-width: 14em;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0.4em 3em #00000075;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 100%;
+  flex: 1 0 5rem;
+}
+
+.split {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 60em;
+}
+
+.box {
+  flex: 1 0 50%;
+}
+
+.small {
+  flex: 1 0 40%;
+}

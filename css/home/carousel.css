@@ -1,0 +1,9 @@
+.main-carousel {
+  margin-top: 2rem;
+}
+
+.carousel-cell {
+  height: 30rem;
+  aspect-ratio: calc(1080 / 2340);
+  margin-right: 1rem;
+}
