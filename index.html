@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/down-arrow.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet">
   <script src="js/nav.js" defer></script>
@@ -15,8 +17,6 @@
 </head>
 
 <body>
-
-
   <div class="nav-header">
     <nav class="container">
       <a href="" class="logo-link">
@@ -50,15 +50,34 @@
         </li>
       </ul>
     </nav>
-    <header>
+    <header class="container">
       <h1>Dan Stubbs</h1>
+      <h2>Flutter + Web Developer, <br> Designer</h2>
     </header>
+    <a href="#content" class="down-arrow">
+      <span class="material-icons-round">
+        arrow_circle_down
+      </span>
+    </a>
   </div>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
-    adipisci, explicabo architecto, voluptatibus quia aliquam vitae laudantium
-    maxime nesciunt commodi molestiae quasi nisi consequuntur praesentium
-    delectus. Nobis excepturi iste non.</p>
+  <main id="content" class="container">
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>I'm a Flutter developer from Colchester with a background in music, art
+        and design. This website is dedicated to showing my work, whether
+        professional or personal, so you can get to know me better.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <h3>Contact Details:</h3>
+      <p>Phone Number: +447443 874014</p>
+      <p>Email: danjoestubbs@gmail.com</p>
+      <a href="https://github.com/danjoemybro" target="_blank">Github</a>
+    </div>
+  </footer>
 </body>
 
 </html>
