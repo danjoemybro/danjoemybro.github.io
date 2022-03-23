@@ -15,17 +15,9 @@ nav {
   gap: 1.5rem;
   text-transform: uppercase;
   font-weight: 300;
-  background-color: hsl(0 86% 47%);
   align-items: center;
   padding: 1.5rem;
   z-index: 2;
-}
-
-@supports (backdrop-filter: blur(1em)) {
-  .primary-navigation {
-    background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(1em);
-  }
 }
 
 .mobile-nav-toggle {
@@ -92,6 +84,23 @@ nav {
     align-items: flex-start;
     transform: translateX(100%);
     transition: transform 400ms ease-out;
+    color: white;
+    background: rgba(0, 0, 0, 0.911);
+  }
+
+  @supports (backdrop-filter: blur(1em)) {
+    .primary-navigation {
+      background: rgba(0, 0, 0, 0.411);
+      backdrop-filter: blur(1em);
+    }
+  }
+
+  .nav-link {
+    color: rgb(226, 226, 226);
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
   }
 
   .primary-navigation[data-visible="true"] {
@@ -109,7 +118,7 @@ nav {
     top: 0rem;
     right: 0rem;
     z-index: 20;
-    background: hsla(0, 0%, 100%, 0.658);
+    background: hsl(0, 0%, 100%);
     color: black;
     border: 0;
     line-height: 0;
