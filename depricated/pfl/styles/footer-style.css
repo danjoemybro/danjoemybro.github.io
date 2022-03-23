@@ -1,0 +1,54 @@
+footer {
+  line-height: 1.5;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: stretch;
+  align-content: stretch;
+}
+
+.footer-left {
+  flex-grow: 1;
+}
+
+.footer-left h4 {
+  font-family: "OpenSauceOneMedium";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 54px;
+  line-height: 57px;
+  text-shadow: 0px 0px 34px #ffffff;
+  margin-right: 5px;
+}
+
+.right .footer-right {
+  text-align: right;
+  min-width: 100px;
+  margin-left: auto;
+}
+
+.right .footer-right h5 {
+  margin: 0;
+  margin-top: 16px;
+  font-family: "OpenSauceOneMedium";
+  font-size: 16px;
+  /* text-align: center; */
+  color: #000000;
+}
+
+.right .footer-right p {
+  margin: 0;
+  /* line-height: 1.5; */
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.right .footer-right a {
+  padding: 0;
+  margin: 0;
+  /* line-height: 1.5; */
+  display: block;
+}

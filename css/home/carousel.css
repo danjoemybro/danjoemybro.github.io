@@ -1,0 +1,10 @@
+.main-carousel {
+  margin-block: 2rem;
+  border-radius: 1rem;
+}
+
+.carousel-cell {
+  height: 20rem;
+  aspect-ratio: calc(1080 / 2340);
+  margin-right: 1rem;
+}

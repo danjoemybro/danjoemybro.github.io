@@ -1,0 +1,12 @@
+footer {
+  background-color: white;
+  color: black;
+  padding-block: 1.4rem;
+  margin-block-start: 2rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
