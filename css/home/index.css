@@ -39,6 +39,7 @@ header h2 {
   color: #fff;
   margin: 2rem;
   transform: scale(2);
+  align-self: flex-end;
 }
 
 .down-arrow span {
@@ -46,4 +47,3 @@ header h2 {
 }
 
 /* About Me */
-

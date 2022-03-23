@@ -1,4 +1,4 @@
-#about-me section {
+/* #about-me section {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -38,4 +38,29 @@
 
 .small {
   flex: 1 0 40%;
+} */
+
+#about-me section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-content {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#about-me img {
+  min-width: 14em;
+  width: 100%;
+  /* max-width: 30rem; */
+  border-radius: 1rem;
+  box-shadow: 0 0.4em 3em #00000075;
+  margin-bottom: auto;
 }

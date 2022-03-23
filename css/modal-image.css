@@ -10,7 +10,7 @@
 
 /* The Modal (background) */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 20;
   padding: 2rem;
