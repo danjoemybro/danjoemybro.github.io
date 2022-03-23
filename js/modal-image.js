@@ -1,6 +1,5 @@
 // image ids to open
 const imageIds = [
-  "dan-and-vashti",
   "c-01",
   "c-02",
   "c-03",
