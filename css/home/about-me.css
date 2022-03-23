@@ -40,6 +40,15 @@
   flex: 1 0 40%;
 } */
 
+#about-me {
+  background-image: url("/images/Stubbs-517.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+
 #about-me section {
   min-height: 100vh;
   display: flex;
@@ -50,17 +59,18 @@
 }
 
 .about-content {
-  margin-top: auto;
+  margin-top: 3rem;
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  line-height: 1.5;
 }
 
-#about-me img {
-  min-width: 14em;
-  width: 100%;
-  /* max-width: 30rem; */
-  border-radius: 1rem;
-  box-shadow: 0 0.4em 3em #00000075;
-  margin-bottom: auto;
+.about-content h2 {
+  font-size: 3rem;
+}
+
+.about-content p {
+  font-size: 1.5rem;
 }

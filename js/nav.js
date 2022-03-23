@@ -9,8 +9,10 @@ const toggleMenu = (e) => {
   primaryNav.setAttribute("data-visible", !visibility);
 
   icon.innerHTML = visibility ? "menu" : "close";
-
-  console.log(!visibility);
 };
 
 navToggle.addEventListener("click", toggleMenu);
+
+$(() => {
+  $(".nav-link").on("click", toggleMenu);
+});
