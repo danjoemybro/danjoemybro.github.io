@@ -10,3 +10,11 @@ footer div {
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.footer-contents {
+  color: black;
+}
+
+.footer-contents a {
+  color: black;
+}
