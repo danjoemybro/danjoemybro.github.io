@@ -4,7 +4,7 @@ import {
   getFirestore,
   collection,
   doc,
-  setDoc,
+  addDoc,
   getDocs,
   Timestamp,
   query,
@@ -55,7 +55,7 @@ const getColors = async () => {
       class="color-card" 
       style="background-color:${data.color}; color:${textColor};">
         <div class="vote-controls">
-          <p>${data.likes}</p>
+          <p>${data.likes.length}</p>
           <button style="color:${textColor};">
             <span class="material-icons-round">
             thumb_up
@@ -66,7 +66,7 @@ const getColors = async () => {
             thumb_down
             </span>
           </button>
-          <p>${data.dislikes}</p>
+          <p>${data.dislikes.length}</p>
         </div>
         <p>${data.colorName}</p>
         <p>${data.color}</p>
@@ -87,14 +87,14 @@ $(() => {
       colorName: $("#color-name").val(),
       color: $("#chosen-color").val(),
       created: Timestamp.now(),
-      likes: 0,
-      dislikes: 0,
+      likes: [],
+      dislikes: [],
     };
 
     console.log(docToAdd);
 
     try {
-      setDoc(doc(db, "colors", docToAdd.color), docToAdd);
+      addDoc(collection(db, "colors"), docToAdd);
       console.log("Document written with ID: " + docToAdd.color);
       getColors();
     } catch (e) {

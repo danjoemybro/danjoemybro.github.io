@@ -36,7 +36,7 @@ html {
   align-items: flex-start;
   /* aspect-ratio: 1; */
   /* width: 16rem; */
-  flex: 1 0 16rem;
+  flex: 1 1 16rem;
   padding: 1rem;
   /* padding-block-start: 3rem; */
 }
@@ -59,7 +59,7 @@ html {
 .vote-controls p {
   background: none;
   border: none;
-  width: 3rem;
+  width: 2rem;
   text-align: center;
   overflow: hidden;
 }
