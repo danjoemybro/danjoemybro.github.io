@@ -1,0 +1,65 @@
+html {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  /* background-color: green; */
+  overflow-inline: hidden;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  /* margin: 0; */
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* border: 1px solid blue; */
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.color-card {
+  display: flex;
+  flex-direction: column;
+  /* justify-items: flex-end; */
+  align-items: flex-start;
+  /* aspect-ratio: 1; */
+  /* width: 16rem; */
+  flex: 1 0 16rem;
+  padding: 1rem;
+  /* padding-block-start: 3rem; */
+}
+
+.color-card p {
+  margin: 0;
+}
+
+.vote-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-self: end;
+}
+
+.vote-controls button {
+  background: none;
+  border: none;
+}
+
+.vote-controls p {
+  background: none;
+  border: none;
+  width: 3rem;
+  text-align: center;
+  overflow: hidden;
+}

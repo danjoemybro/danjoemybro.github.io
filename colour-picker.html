@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/colour-picker/colour-picker.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    rel="stylesheet">
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="module" src="js/jquery.js"></script>
+  <title>Colour Picker | Dan Stubbs</title>
+</head>
+
+<body>
+  <h1>Colour Picker</h1>
+  <h3>Add Your Favorite Colour Today</h3>
+  <form action="javascript:void(0);">
+    <label for="color-name">Colour Name</label>
+    <input type="text" id="color-name" value="" required>
+    <br><br>
+    <label for="chosen-color">Chosen Color</label>
+    <input type="color" name="" id="chosen-color">
+    <br><br>
+    <button type="submit" id="color-submit">Submit</button>
+  </form>
+  <h2 id="chosen-colors">Elements</h2>
+  <div class="cards">
+  </div>
+</body>
+
+</html>
