@@ -11,7 +11,6 @@ import {
   orderBy,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
-// import { FirebaseUI } from "https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
