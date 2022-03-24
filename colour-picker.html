@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/colour-picker/colour-picker.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet">
@@ -14,15 +15,15 @@
   <title>Colour Picker | Dan Stubbs</title>
 </head>
 
-<body>
+<body class="container">
   <h1>Colour Picker</h1>
   <h3>Add Your Favorite Colour Today</h3>
   <form action="javascript:void(0);">
-    <label for="color-name">Colour Name</label>
-    <input type="text" id="color-name" value="" required>
+    <label for="color-name">Colour Name:</label>
+    <input type="text" id="color-name" value="" maxlength="40" required>
     <br><br>
-    <label for="chosen-color">Chosen Color</label>
-    <input type="color" name="" id="chosen-color">
+    <label for="chosen-color">Chosen Color:</label>
+    <input type="color" name="" id="chosen-color" value="#ffffff">
     <br><br>
     <button type="submit" id="color-submit">Submit</button>
   </form>

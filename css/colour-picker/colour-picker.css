@@ -22,6 +22,19 @@ html {
   /* border: 1px solid blue; */
 }
 
+body {
+  margin-block: 4rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 4rem;
+}
+
 .cards {
   display: flex;
   flex-flow: row wrap;

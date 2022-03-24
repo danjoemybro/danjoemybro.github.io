@@ -11,6 +11,7 @@ import {
   orderBy,
   limit,
 } from "https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js";
+// import { FirebaseUI } from "https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -39,8 +40,12 @@ function wc_hex_is_light(color) {
   return brightness > 155;
 }
 
+function getRandomColor() {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
+
 const getColors = async () => {
-  const q = query(collection(db, "colors"), orderBy("created"), limit(25));
+  const q = query(collection(db, "colors"), orderBy("color"), limit(25));
   const querySnapshot = await getDocs(q);
   $(() => {
     $(".cards").empty();
@@ -54,21 +59,7 @@ const getColors = async () => {
       cardsHTML += `<div 
       class="color-card" 
       style="background-color:${data.color}; color:${textColor};">
-        <div class="vote-controls">
-          <p>${data.likes.length}</p>
-          <button style="color:${textColor};">
-            <span class="material-icons-round">
-            thumb_up
-            </span>
-          </button>
-          <button style="color:${textColor};">
-            <span class="material-icons-round">
-            thumb_down
-            </span>
-          </button>
-          <p>${data.dislikes.length}</p>
-        </div>
-        <p>${data.colorName}</p>
+        <p style="font-weight: 300">${data.colorName}</p>
         <p>${data.color}</p>
       </div>`;
     });
@@ -83,24 +74,36 @@ getColors();
 
 $(() => {
   $("form").on("submit", () => {
-    const docToAdd = {
-      colorName: $("#color-name").val(),
-      color: $("#chosen-color").val(),
-      created: Timestamp.now(),
-      likes: [],
-      dislikes: [],
-    };
+    const colorName = $("#color-name").val();
 
-    console.log(docToAdd);
+    if (colorName.length <= 40) {
+      const docToAdd = {
+        colorName: colorName,
+        color: $("#chosen-color").val(),
+        created: Timestamp.now(),
+        likes: [],
+        dislikes: [],
+      };
 
-    try {
-      addDoc(collection(db, "colors"), docToAdd);
-      console.log("Document written with ID: " + docToAdd.color);
-      getColors();
-    } catch (e) {
-      console.error("Error adding document: ", e);
+      console.log(docToAdd);
+
+      try {
+        addDoc(collection(db, "colors"), docToAdd);
+        console.log("Document written with ID: " + docToAdd.color);
+        $("#chosen-color").val(getRandomColor());
+        $("#color-name").val("");
+        getColors();
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+    } else {
+      alert("Hello Sneaky!");
+      $("#color-name").val("");
     }
   });
+
+  // Set random color on the button
+  $("#chosen-color").val(getRandomColor());
 });
 
 // get from firebase only on first launch, then add new docs to table.
