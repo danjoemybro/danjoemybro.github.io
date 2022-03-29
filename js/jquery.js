@@ -100,7 +100,7 @@ $(() => {
       $("#color-name").val("");
     }
   });
-
+v
   // Set random color on the button
   $("#chosen-color").val(getRandomColor());
 });
