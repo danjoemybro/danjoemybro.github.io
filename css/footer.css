@@ -18,3 +18,8 @@ footer div {
 .footer-contents a {
   color: black;
 }
+
+.footer-contents a:hover {
+  color: black;
+  text-decoration: underline;
+}
