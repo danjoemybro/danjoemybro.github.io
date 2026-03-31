@@ -33,6 +33,11 @@
   font-size: 1.5rem;
 }
 
+.about-content a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
 @media (max-width: 35rem) {
   .about-content h2 {
     font-size: 2.5rem;
