@@ -1,5 +1,5 @@
 #about-me {
-  background-image: url("/images/dan-and-vashti-evening.png");
+  background-image: url("../../images/dan-and-vashti-evening.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,6 +31,10 @@
 
 .about-content p {
   font-size: 1.5rem;
+}
+
+.about-content p a {
+  color: #323e4c;
 }
 
 @media (max-width: 35rem) {
